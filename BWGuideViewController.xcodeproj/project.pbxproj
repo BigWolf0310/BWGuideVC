@@ -13,6 +13,11 @@
 		671D5AE023ACA86A0069D0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671D5ADF23ACA86A0069D0CF /* Assets.xcassets */; };
 		671D5AE323ACA86A0069D0CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671D5AE123ACA86A0069D0CF /* LaunchScreen.storyboard */; };
 		671D5AE623ACA86A0069D0CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AE523ACA86A0069D0CF /* main.m */; };
+		671D5AEE23ACA8DA0069D0CF /* BWGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AED23ACA8DA0069D0CF /* BWGuideViewController.m */; };
+		671D5AF123ACA9110069D0CF /* BWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AF023ACA9110069D0CF /* BWTabBarViewController.m */; };
+		671D5AF423ACA9250069D0CF /* BWFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AF323ACA9250069D0CF /* BWFirstViewController.m */; };
+		671D5AF723ACA92D0069D0CF /* BWSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AF623ACA92D0069D0CF /* BWSecondViewController.m */; };
+		671D5AFA23ACB3D10069D0CF /* BWGuideCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671D5AF923ACB3D10069D0CF /* BWGuideCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		671D5AE223ACA86A0069D0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671D5AE423ACA86A0069D0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		671D5AE523ACA86A0069D0CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		671D5AEC23ACA8DA0069D0CF /* BWGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGuideViewController.h; sourceTree = "<group>"; };
+		671D5AED23ACA8DA0069D0CF /* BWGuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGuideViewController.m; sourceTree = "<group>"; };
+		671D5AEF23ACA9110069D0CF /* BWTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTabBarViewController.h; sourceTree = "<group>"; };
+		671D5AF023ACA9110069D0CF /* BWTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTabBarViewController.m; sourceTree = "<group>"; };
+		671D5AF223ACA9250069D0CF /* BWFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWFirstViewController.h; sourceTree = "<group>"; };
+		671D5AF323ACA9250069D0CF /* BWFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWFirstViewController.m; sourceTree = "<group>"; };
+		671D5AF523ACA92D0069D0CF /* BWSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWSecondViewController.h; sourceTree = "<group>"; };
+		671D5AF623ACA92D0069D0CF /* BWSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWSecondViewController.m; sourceTree = "<group>"; };
+		671D5AF823ACB3D10069D0CF /* BWGuideCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWGuideCollectionViewCell.h; sourceTree = "<group>"; };
+		671D5AF923ACB3D10069D0CF /* BWGuideCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWGuideCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,16 @@
 			children = (
 				671D5AD623ACA8690069D0CF /* AppDelegate.h */,
 				671D5AD723ACA8690069D0CF /* AppDelegate.m */,
+				671D5AEC23ACA8DA0069D0CF /* BWGuideViewController.h */,
+				671D5AED23ACA8DA0069D0CF /* BWGuideViewController.m */,
+				671D5AF823ACB3D10069D0CF /* BWGuideCollectionViewCell.h */,
+				671D5AF923ACB3D10069D0CF /* BWGuideCollectionViewCell.m */,
+				671D5AEF23ACA9110069D0CF /* BWTabBarViewController.h */,
+				671D5AF023ACA9110069D0CF /* BWTabBarViewController.m */,
+				671D5AF223ACA9250069D0CF /* BWFirstViewController.h */,
+				671D5AF323ACA9250069D0CF /* BWFirstViewController.m */,
+				671D5AF523ACA92D0069D0CF /* BWSecondViewController.h */,
+				671D5AF623ACA92D0069D0CF /* BWSecondViewController.m */,
 				671D5AD923ACA8690069D0CF /* ViewController.h */,
 				671D5ADA23ACA8690069D0CF /* ViewController.m */,
 				671D5ADC23ACA8690069D0CF /* Main.storyboard */,
@@ -97,6 +122,7 @@
 		671D5ACB23ACA8690069D0CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BW;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = syt;
 				TargetAttributes = {
@@ -141,7 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				671D5AF423ACA9250069D0CF /* BWFirstViewController.m in Sources */,
+				671D5AEE23ACA8DA0069D0CF /* BWGuideViewController.m in Sources */,
+				671D5AF123ACA9110069D0CF /* BWTabBarViewController.m in Sources */,
 				671D5ADB23ACA8690069D0CF /* ViewController.m in Sources */,
+				671D5AFA23ACB3D10069D0CF /* BWGuideCollectionViewCell.m in Sources */,
+				671D5AF723ACA92D0069D0CF /* BWSecondViewController.m in Sources */,
 				671D5AE623ACA86A0069D0CF /* main.m in Sources */,
 				671D5AD823ACA8690069D0CF /* AppDelegate.m in Sources */,
 			);

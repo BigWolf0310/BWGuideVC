@@ -8,7 +8,14 @@
 
 #import "AppDelegate.h"
 
+#import "BWTabBarViewController.h"
+#import "BWGuideViewController.h"
+
+#define kLoadGuide    @"loadGuide"
+
 @interface AppDelegate ()
+
+
 
 @end
 
@@ -17,8 +24,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = UIColor.whiteColor;
+    [self.window makeKeyAndVisible];
+    
+     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [self setRootVC];
+    
     return YES;
 }
+
+
+- (void)setRootVC
+{
+    BOOL isFirstLoad = [[NSUserDefaults standardUserDefaults] boolForKey:kLoadGuide];
+    NSLog(@"isFirstLoad = %d", isFirstLoad);
+    if (!isFirstLoad) {
+        self.window.rootViewController = [BWGuideViewController new];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kLoadGuide];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else {
+        self.window.rootViewController = [BWTabBarViewController new];
+    }
+}
+
+
+
+
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
