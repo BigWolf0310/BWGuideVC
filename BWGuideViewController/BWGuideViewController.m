@@ -71,7 +71,12 @@
 
 - (void)jumpMainVC
 {
-    [self presentViewController:[BWTabBarViewController new] animated:NO completion:nil];
+    BWTabBarViewController *tabBarVC = [BWTabBarViewController new];
+    // 适配iOS13.0
+    if(@available(iOS 13.0, *)) {
+        tabBarVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    [self presentViewController:tabBarVC animated:NO completion:nil];
 }
 
 
